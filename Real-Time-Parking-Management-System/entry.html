@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Entry | Real-Time Parking Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="brand"><div class="logo">P</div>ParkSmart</div>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="entry.html" class="active">🚗 Vehicle Entry</a>
+      <a href="records.html">📋 Records</a>
+    </nav>
+    <a href="index.html" class="logout">Log Out</a>
+  </div>
+
+  <main>
+    <div class="topbar">
+      <div><h1>Vehicle Entry</h1><p>Register a vehicle and assign a parking slot</p></div>
+      <div class="user-chip"><span class="avatar">AD</span> Parking Attendant</div>
+    </div>
+
+    <div class="grid-2 top">
+      <div class="card">
+        <div class="step-head">
+          <div class="step-no">1</div>
+          <div><h2>Vehicle Information</h2><p class="sub">Enter the details of the arriving vehicle.</p></div>
+        </div>
+
+        <form>
+          <div class="form-grid">
+            <label class="field">Vehicle Type
+              <select><option value="">-- Select type --</option><option>Motorcycle</option><option>Car (Sedan)</option><option selected>SUV</option><option>Van</option></select>
+            </label>
+            <label class="field">License Plate Number <input placeholder="e.g. ABC 1234" value="ABC 1234"></label>
+          </div>
+          <div class="btn-row">
+            <button type="button" class="btn btn-primary">🔍 Identify &amp; Assign Slot</button>
+            <button type="reset" class="btn btn-outline">Clear</button>
+          </div>
+        </form>
+
+        <hr>
+
+        <div class="step-head">
+          <div class="step-no">2</div>
+          <div><h2>Ticket Information</h2><p class="sub">Generated automatically after slot assignment.</p></div>
+        </div>
+        <div class="form-grid">
+          <label class="field">Parking Slot Number <input value="C-04" readonly></label>
+          <label class="field">Vehicle Type <input value="SUV" readonly></label>
+          <label class="field">License Plate Number <input value="ABC 1234" readonly></label>
+          <label class="field">Duration <input value="0 hr (just entered)" readonly></label>
+          <label class="field">Payment Per Hour <input value="₱40.00" readonly></label>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-dark">🖨️ Print Ticket</button>
+          <a href="dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Ticket Preview</h2>
+        <p class="sub">What the driver receives</p>
+        <div class="ticket">
+          <h3>PARKING TICKET</h3>
+          <p class="ticket-slot">C-04<small>Proceed to Car Area</small></p>
+          <p class="row"><span>Vehicle Type</span><span>SUV</span></p>
+          <p class="row"><span>License Plate</span><span>ABC 1234</span></p>
+          <p class="row"><span>Time In</span><span>7:43 PM</span></p>
+          <p class="row"><span>Duration</span><span>0 hr</span></p>
+          <p class="row"><span>Rate / Hour</span><span>₱40.00</span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

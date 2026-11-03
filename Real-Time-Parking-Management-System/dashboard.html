@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Real-Time Parking Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="brand"><div class="logo">P</div>ParkSmart</div>
+    <nav>
+      <a href="dashboard.html" class="active">📊 Dashboard</a>
+      <a href="entry.html">🚗 Vehicle Entry</a>
+      <a href="records.html">📋 Records</a>
+    </nav>
+    <a href="index.html" class="logout">Log Out</a>
+  </div>
+
+  <main>
+    <div class="topbar">
+      <div><h1>Dashboard</h1><p>Live parking availability overview</p></div>
+      <div class="user-chip"><span class="avatar">AD</span> Parking Attendant</div>
+    </div>
+
+    <div class="stats">
+      <div class="card stat"><span class="blue">🅿️</span><div><b>30</b><small>Total Slots</small></div></div>
+      <div class="card stat"><span class="green">✅</span><div><b>13</b><small>Available</small></div></div>
+      <div class="card stat"><span class="red">🚫</span><div><b>16</b><small>Occupied</small></div></div>
+      <div class="card stat"><span class="amber">⭐</span><div><b>1</b><small>Reserved</small></div></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>Parking Area Map</h2>
+        <p class="sub">Slots update in real time as vehicles enter and leave.</p>
+
+        <p class="area">🏍️ Motorcycle Area <small>5 of 10 available</small></p>
+        <div class="slots">
+          <span class="taken">M-01</span><span class="taken">M-02</span><span class="free">M-03</span><span class="taken">M-04</span><span class="free">M-05</span>
+          <span class="free">M-06</span><span class="taken">M-07</span><span class="free">M-08</span><span class="taken">M-09</span><span class="free">M-10</span>
+        </div>
+
+        <p class="area">🚗 Car Area <small>8 of 20 available</small></p>
+        <div class="slots">
+          <span class="taken">C-01</span><span class="taken">C-02</span><span class="taken">C-03</span><span class="free">C-04</span><span class="taken">C-05</span>
+          <span class="taken">C-06</span><span class="free">C-07</span><span class="taken">C-08</span><span class="reserved">C-09</span><span class="taken">C-10</span>
+          <span class="free">C-11</span><span class="taken">C-12</span><span class="free">C-13</span><span class="free">C-14</span><span class="taken">C-15</span>
+          <span class="free">C-16</span><span class="taken">C-17</span><span class="free">C-18</span><span class="taken">C-19</span><span class="free">C-20</span>
+        </div>
+
+        <div class="legend">
+          <span class="free">Available</span><span class="taken">Occupied</span><span class="reserved">Reserved</span>
+        </div>
+      </div>
+
+      <div class="side">
+        <div class="card">
+          <h2>Quick Actions</h2>
+          <p class="sub">Common tasks</p>
+          <div class="btn-row col">
+            <a href="entry.html" class="btn btn-primary">➕ New Vehicle Entry</a>
+            <a href="records.html" class="btn btn-dark">📋 View Records</a>
+            <a href="#" class="btn btn-outline">🔄 Refresh Availability</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Recent Activity</h2>
+          <p class="sub">Latest entries and exits</p>
+          <p class="row"><span>ABC 1234 → C-04</span><span class="badge green">Entered</span></p>
+          <p class="row"><span>NBX 902 → M-03</span><span class="badge gray">Exited</span></p>
+          <p class="row"><span>DAK 5521 → C-11</span><span class="badge green">Entered</span></p>
+          <p class="row"><span>TRP 318 → M-05</span><span class="badge gray">Exited</span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

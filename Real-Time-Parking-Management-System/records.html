@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Records | Real-Time Parking Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="brand"><div class="logo">P</div>ParkSmart</div>
+    <nav>
+      <a href="dashboard.html">📊 Dashboard</a>
+      <a href="entry.html">🚗 Vehicle Entry</a>
+      <a href="records.html" class="active">📋 Records</a>
+    </nav>
+    <a href="index.html" class="logout">Log Out</a>
+  </div>
+
+  <main>
+    <div class="topbar">
+      <div><h1>Parking Records</h1><p>History of vehicle entries, exits, and payments</p></div>
+      <div class="user-chip"><span class="avatar">AD</span> Parking Attendant</div>
+    </div>
+
+    <div class="card">
+      <div class="summary">
+        <div><b>48</b><span>Vehicles Today</span></div>
+        <div><b>32</b><span>Cars</span></div>
+        <div><b>16</b><span>Motorcycles</span></div>
+        <div><b>₱2,340.00</b><span>Total Collected</span></div>
+      </div>
+
+      <div class="toolbar">
+        <input class="search" placeholder="🔍 Search plate number or slot...">
+        <select><option>All Types</option><option>Motorcycle</option><option>Car</option><option>SUV</option></select>
+        <select><option>All Status</option><option>Parked</option><option>Exited</option></select>
+        <input type="date">
+        <button class="btn btn-dark">⬇ Export</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <tr><th>Ticket #</th><th>Plate Number</th><th>Type</th><th>Slot</th><th>Time In</th><th>Duration</th><th>Payment</th><th>Status</th><th>Action</th></tr>
+          <tr><td>#0048</td><td>ABC 1234</td><td>SUV</td><td>C-04</td><td>7:43 PM</td><td>0 hr</td><td>₱0.00</td><td><span class="badge green">Parked</span></td><td><button class="btn btn-sm btn-danger">Check Out</button></td></tr>
+          <tr><td>#0047</td><td>NBX 902</td><td>Motorcycle</td><td>M-03</td><td>5:10 PM</td><td>2 hrs</td><td>₱40.00</td><td><span class="badge gray">Exited</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+          <tr><td>#0046</td><td>DAK 5521</td><td>Car</td><td>C-11</td><td>4:55 PM</td><td>3 hrs</td><td>₱120.00</td><td><span class="badge green">Parked</span></td><td><button class="btn btn-sm btn-danger">Check Out</button></td></tr>
+          <tr><td>#0045</td><td>TRP 318</td><td>Motorcycle</td><td>M-05</td><td>3:20 PM</td><td>1 hr</td><td>₱20.00</td><td><span class="badge gray">Exited</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+          <tr><td>#0044</td><td>GHT 7740</td><td>Van</td><td>C-16</td><td>2:48 PM</td><td>4 hrs</td><td>₱160.00</td><td><span class="badge gray">Exited</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+          <tr><td>#0043</td><td>LMN 215</td><td>Car</td><td>C-07</td><td>1:30 PM</td><td>5 hrs</td><td>₱200.00</td><td><span class="badge green">Parked</span></td><td><button class="btn btn-sm btn-danger">Check Out</button></td></tr>
+        </table>
+      </div>
+
+      <div class="pagination">
+        <span>Showing 1–6 of 48 records</span>
+        <div class="pages"><a href="#">‹</a><a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">›</a></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
