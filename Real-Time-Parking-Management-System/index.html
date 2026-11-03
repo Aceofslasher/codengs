@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Parking Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <b>🅿 ParkTrack</b>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#entry">Vehicle Entry</a>
+    <a href="#slots">Parking Slots</a>
+    <a href="#exit">Vehicle Exit</a>
+    <a href="#records">Records</a>
+    <a href="#login">Logout</a>
+  </nav>
+
+  <!-- 1. LOGIN -->
+  <section id="login" class="pg">
+    <form class="card">
+      <h1>🅿 Real-Time Parking Management System</h1>
+      <p>Please log in to continue</p>
+      <label>Username</label>
+      <input type="text" placeholder="Enter username">
+      <label>Password</label>
+      <input type="password" placeholder="Enter password">
+      <a class="btn" href="#dashboard">Login</a>
+    </form>
+  </section>
+
+  <!-- 2. DASHBOARD -->
+  <section id="dashboard" class="pg">
+    <h2>Dashboard</h2>
+    <div class="grid">
+      <div class="card stat"><p>Total Slots</p><h1>50</h1></div>
+      <div class="card stat g"><p>Available Slots</p><h1>32</h1></div>
+      <div class="card stat r"><p>Occupied Slots</p><h1>18</h1></div>
+    </div>
+
+    <div class="card">
+      <h3>Parking Statistics</h3>
+      <p>Motorcycle (8)</p><div class="bar"><i style="width:40%"></i></div>
+      <p>Sedan (6)</p><div class="bar"><i style="width:30%"></i></div>
+      <p>SUV (3)</p><div class="bar"><i style="width:15%"></i></div>
+      <p>Van (1)</p><div class="bar"><i style="width:5%"></i></div>
+    </div>
+
+    <div class="card">
+      <h3>Recent Vehicle Entries</h3>
+      <table>
+        <tr><th>Plate No.</th><th>Type</th><th>Slot</th><th>Entry Time</th></tr>
+        <tr><td>ABC 1234</td><td>Sedan</td><td>A-03</td><td>08:15 AM</td></tr>
+        <tr><td>XYZ 5678</td><td>SUV</td><td>B-01</td><td>08:42 AM</td></tr>
+        <tr><td>MOT 9012</td><td>Motorcycle</td><td>C-05</td><td>09:05 AM</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 3. VEHICLE ENTRY -->
+  <section id="entry" class="pg">
+    <h2>Vehicle Entry</h2>
+    <form class="card">
+      <label>Vehicle Type</label>
+      <select>
+        <option>Motorcycle</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        <option>Van</option>
+      </select>
+      <label>Plate Number</label>
+      <input type="text" placeholder="e.g. ABC 1234">
+      <label>Entry Time</label>
+      <input type="time" value="08:00">
+      <a class="btn" href="#slots">Assign Parking Slot</a>
+    </form>
+  </section>
+
+  <!-- 4. PARKING SLOTS -->
+  <section id="slots" class="pg">
+    <h2>Parking Slots</h2>
+    <p>🟩 Available &nbsp; 🟥 Occupied</p>
+    <div class="grid slots">
+      <div class="card slot g"><h3>A-01</h3><p>Motorcycle</p></div>
+      <div class="card slot r"><h3>A-02</h3><p>Motorcycle</p></div>
+      <div class="card slot r"><h3>A-03</h3><p>Sedan</p></div>
+      <div class="card slot g"><h3>A-04</h3><p>Sedan</p></div>
+      <div class="card slot g"><h3>B-01</h3><p>SUV</p></div>
+      <div class="card slot r"><h3>B-02</h3><p>SUV</p></div>
+      <div class="card slot g"><h3>B-03</h3><p>Van</p></div>
+      <div class="card slot r"><h3>B-04</h3><p>Van</p></div>
+    </div>
+  </section>
+
+  <!-- 5. VEHICLE EXIT -->
+  <section id="exit" class="pg">
+    <h2>Vehicle Exit</h2>
+    <form class="card">
+      <label>Plate Number</label>
+      <input type="text" placeholder="e.g. ABC 1234">
+      <label>Exit Time</label>
+      <input type="time" value="05:00">
+      <p>Estimated Parking Fee: <b>₱ 100.00</b></p>
+      <a class="btn" href="#records">Process Exit</a>
+    </form>
+  </section>
+
+  <!-- 6. RECORDS -->
+  <section id="records" class="pg">
+    <h2>Records</h2>
+    <div class="card">
+      <table>
+        <tr><th>Plate No.</th><th>Type</th><th>Slot</th><th>Entry</th><th>Exit</th><th>Fee</th></tr>
+        <tr><td>ABC 1234</td><td>Sedan</td><td>A-03</td><td>08:15 AM</td><td>11:30 AM</td><td>₱ 120.00</td></tr>
+        <tr><td>XYZ 5678</td><td>SUV</td><td>B-01</td><td>08:42 AM</td><td>01:10 PM</td><td>₱ 180.00</td></tr>
+        <tr><td>MOT 9012</td><td>Motorcycle</td><td>C-05</td><td>09:05 AM</td><td>10:00 AM</td><td>₱ 30.00</td></tr>
+        <tr><td>VAN 3456</td><td>Van</td><td>B-04</td><td>09:30 AM</td><td>12:45 PM</td><td>₱ 150.00</td></tr>
+      </table>
+    </div>
+  </section>
+
+</body>
+</html>
